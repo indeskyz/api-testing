@@ -1,13 +1,12 @@
+require("dotenv").config()
+const mongoURL = process.env.DB_CONNECTION
+const port = process.env.PORT 
+
+
 const express = require("express")
 const  mongoose  = require("mongoose")
 const employeeRouter = require("./routes/EmployeeRoutes")
 const app = express()
-const dotenv = require("dotenv")
-dotenv.config()
-const mongoURL = process.env.DB_CONNECTION
-
-
-const port = process.env.PORT || 8080
 
 app.listen(port, ()=> console.log(`app running on ${port}`))
 
@@ -23,7 +22,7 @@ app.use(employeeRouter)
 
 
 //db connection
-mongoose.connect(mongoURL,{
+mongoose.connect(`${mongoURL}`,{
     useNewUrlParser : true,
     useUnifiedTopology : true,
 })
