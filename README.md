@@ -4,8 +4,8 @@ Used to practice building RESTful API's.
 
 ## Tech Stacks Used So Far
 
-    - MERN
-    - MEAN
+- MERN
+- MEAN
 
 ### Backend Technologies Used
 
