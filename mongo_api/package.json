@@ -1,0 +1,26 @@
+{
+  "name": "101072045_labtest02",
+  "version": "1.0.0",
+  "description": "labTest 02",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "labtest",
+    "02",
+    "tanner",
+    "rizopoulos",
+    "101072045",
+    "full",
+    "stack",
+    "development"
+  ],
+  "author": "Tanner Rizopoulos",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.3"
+  }
+}
