@@ -2,7 +2,9 @@ const express = require("express")
 const  mongoose  = require("mongoose")
 const employeeRouter = require("./routes/EmployeeRoutes")
 const app = express()
-require("dotenv/config")
+const dotenv = require("dotenv")
+dotenv.config()
+const mongoURL = process.env.DB_CONNECTION
 
 
 const port = process.env.PORT || 8080
@@ -21,7 +23,7 @@ app.use(employeeRouter)
 
 
 //db connection
-mongoose.connect('mongodb+srv://test:testing123@cluster0.fvdk1.mongodb.net/Employees?retryWrites=true&w=majority',{
+mongoose.connect(mongoURL,{
     useNewUrlParser : true,
     useUnifiedTopology : true,
 })
